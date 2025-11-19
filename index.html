@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+
+    <div class="container">
+
+        <header>
+            <h2>Workspace</h2>
+
+            <nav>
+                <li><a href="">Dashboard</a></li>
+               <li><a href=""> Staff Manager</a></li>
+            
+              <select name="" id="zonse">
+                <option value="">Zones</option>
+                <option value="">Salle de conférence</option>
+                <option value="">Réception</option>
+                <option value="">Salle du personnel</option>
+                <option value="">Salle de sécurité</option>
+                <option value="">Salle des serveurs</option>
+                <option value="">Salle d’archives</option>
+              </select>
+
+              
+             
+            </nav>
+
+
+            <h4>staff Members(unassined)</h4>
+            
+            <div id="placeAllInfo">
+                
+                <div class="infoimployees">
+                
+                
+
+                <img src="Profile-PNG-Photo.png" alt="photo">
+                
+
+                <div>
+
+                </div>
+                <a href=""> <label for="">Amine elarar</label></a>
+                <!-- <button class="add">add</button>  -->
+
+                <div  class="bototrach">
+
+                    <!-- <img src="trash-xmark-svgrepo-com.svg" alt=""> -->
+                    <a href="">edit</a>
+
+                    
+                </div>
+
+            </div>
+            
+            
+            
+                
+                
+            </div>
+            
+        </header>
+        
+        <div class="cards">
+            <div  class="h1-buttom">
+                <h3>Visual Staff Organizer </h3>
+
+                
+                    <button  id="addworkers" > <span>+</span> Add workers</button>
+
+
+            </div>
+
+            <div  id="form"  class="form">
+
+                <button class="close">x</button>
+
+                 <h3>Add New Worker</h3>
+
+
+               
+                <div class="form-row">
+                    <label for="name">Name com</label>
+                  <input type="text" id="name" name="namecomp" required>
+
+                </div>
+                 <div class="form-row">
+                        <label for="email">Email imp-</label>
+                         <input type="email" id="email" name="email" required>
+
+                       </div>
+
+                          <div class="form-row">
+                         <label for="phone">Phone imp</label>
+                          <input type="tel" id="phone" name="phone">
+                         </div>
+
+                         <div class="form-row">
+                          <label for="photo">Photo URL</label>
+                           <input type="url" id="photo" name="photo" placeholder="Photo URL">
+                       </div>
+                 
+                    <div>
+                   <label for="role">Role</label>
+                   <select  id="role" name="role" required>
+                    <option value="">Select Role</option>
+                    <option value="Manager">Manager</option>
+                      <option value="Receptionist">Receptionist</option>
+                        <option value="IT Technician">IT Technician</option>
+                        <option value="Security Agent">Security Agent</option>
+                        <option value="Cleaning">Cleaning</option>
+                             <option value="Other">Other</option>
+                            </select>
+                       </div>
+                        <button  id="form-addworker" > Add workers</button>
+                      
+            </div>
+          
+      
+ 
+   
+          
+  
+
+
+            <div class="cards-grid">
+               <div class="zone">
+                <div class="logoandtitle">
+                    
+                    <i class="fa-solid fa-people-group" style="color: rgb(42, 127, 99);"></i>
+                    <h2>Salle de conférence</h2>
+                </div>
+                <div  id="Salledeconference" class="imp">
+                    
+                </div>
+                <div class="div">
+                    <h4> <a href="">show more</a></h4>
+                    <button type="submit"  class="botoadd" >+</button>
+                </div>
+                
+               </div>
+               <div class="zone">
+                <div class="logoandtitle">
+                     <i class="fa-solid fa-bell-concierge" style="color: rgb(42, 127, 99);"></i>
+                     <h2>container</h2>  
+                     </div>
+                <div  id="container" class="imp">
+                    
+                </div>
+                <div class="div">
+                    <h4> <a href="">show more</a></h4>
+                    <button type="submit"  class="botoadd" >+</button>
+                </div>
+    </div>
+               <div class="zone">
+                <div class="logoandtitle">
+                    <i class="fa-solid fa-server" style="color: rgb(42, 127, 99);"></i>
+ 
+
+                    <h2>Salle du personnel</h2>
+                </div>
+                <div id="SalleDuPersonnel" class="imp">
+                    <!-- <i class="fa-solid fa-people-group" style="color: rgb(42, 127, 99);"></i> -->
+
+    
+                </div>
+                <div class="div">
+                    <h4> <a href="">show more</a></h4>
+                    <button type="submit"  class="botoadd" >+</button>
+                </div>
+            </div>
+               <div class="zone">
+                <div class="logoandtitle">
+                        <i class="fa-solid fa-shield-halved" style="color: rgb(42, 127, 99);"></i>
+                    <h2>Salle de sécurité</h2>
+                </div>
+                
+                <div  id="SalledeSecuritE" class="imp">
+                    
+                </div>
+                <div class="div">
+                    <h4> <a href="">show more</a></h4>
+                    <button type="submit"  class="botoadd" >+</button>
+                </div>
+            </div>
+               <div class="zone">
+                 <div class="logoandtitle">
+                    <i class="fa-solid fa-people-roof" style="color: rgb(42, 127, 99);"></i>
+
+                    <h2>Salle des serveurs</h2>
+                     </div>
+                
+                <div  id="SalleDesServeurs" class="imp">
+                    v
+                </div>
+                <div class="div">
+                    <h4> <a href="">show more</a></h4>
+                    <button type="submit"  class="botoadd" >+</button>
+                </div>
+
+
+
+            </div>
+               <div class="zone">
+                
+                 <div class="logoandtitle">
+                    <i class="fa-solid fa-box-archive" style="color: rgb(42, 127, 99);"></i>
+
+                     <h2>Salle d’archives</h2>
+                     </div>
+                
+                <div  id="archives" class="imp">
+                    v
+                </div>
+                <div class="div">
+                    <h4> <a href="">show more</a></h4>
+                    <button type="submit"  class="botoadd" >+</button>
+                </div>
+
+            
+            
+            </div>
+
+            </div>
+            
+
+
+            
+            
+
+
+
+
+        </div>
+
+
+        
+    </div>
+
+
+
+
+    <script src="js.js"></script>
+
+
+
+
+
+    
+    
+</body>
+</html>
