@@ -1,0 +1,337 @@
+body{
+    background-color:rgb(24, 21, 21);
+    margin: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container{
+    
+    
+    display: flex;
+}
+
+.container header{
+    border-right: rgb(237, 221, 221)   1px solid;
+    
+    background-color:rgb(11, 11, 11);
+    color: aliceblue;
+    text-align: center;
+    width: 350px;
+     padding-top: auto ;
+    /* position: fixed;    */
+    /* left: 0;
+    top: 0; */
+   
+}
+.container header h2{
+    color: aquamarine;
+
+}
+
+.container header a{
+    
+    text-decoration: none;
+    margin: 4px;
+    text-align: center;
+    padding: 10px;
+    display: inline-block;
+    height: 20px;
+    color: aliceblue;
+    width: 90%;
+    border-radius: 10px;
+}
+.container header a:hover{
+    background-color: rgb(42, 127, 99);
+    transition: 1s;
+    
+}
+
+.container .cards{
+
+    
+    background-color: rgb(24, 21, 21);
+    color: aliceblue;
+    position: static;
+    /* margin-left: 250px;  */
+    height: 100%;
+    width: 100%;
+    
+    
+    text-align: center;
+}
+
+
+.cards-grid{
+    
+    display: grid ;
+    color: rgb(0, 0, 0);
+    margin: auto;
+    width: 90%;
+    height: 100%;
+    
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    margin-top: 100px;
+    gap: 20px;
+
+
+}
+.zone{
+    border: 1px solid;
+    width: 380px;
+    height: 300px;
+    background-color: aliceblue;
+    border-radius: 20px;
+}
+/* .zone:hover{
+    padding: 20px;
+    transition: 2s;
+} */
+/* .container .cards button{
+    width: 160px;
+    border-radius: 10px;
+    
+    border: none;
+    color: aliceblue;
+    font-size: 30px;
+    background-color:rgb(9, 211, 70);
+} */
+#zonse{
+    font-size: 17px;
+    text-align: center;
+
+    border: none;
+    color: aliceblue;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    background-color: black;
+}
+#zonse option:hover{
+        background-color: rgb(42, 127, 99);
+
+}
+#zonse:hover{
+
+    background-color: rgb(42, 127, 99);
+    transition: 1s;
+}
+
+.infoimployees{
+    border-radius: 20px;
+    
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    padding: 16px;
+    justify-content: space-around;
+    margin-top: 40px;
+
+    
+
+}
+
+.infoimployees  a{
+    /* background-color: aliceblue; */
+    margin: 0px;
+}
+.infoimployees img{
+    
+    width: 40px;
+    height: 40px;
+}
+
+
+.bototrach{
+    border-radius: 10px;
+    
+    display: flex;
+    color: black;
+    
+    background-color:red;
+}
+.bototrach img{
+    margin-top: 4px;
+    color: aliceblue;
+    width: 20px;
+    
+}
+.delete{
+    
+   border-radius: 10px;
+    color: aliceblue;
+    /* background-color: red;border: none; */
+}
+
+.h1-buttom {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    color: aliceblue;
+}
+.h1-buttom button{
+    
+    
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    color: aliceblue;
+    background-color:  rgb(42, 127, 99);
+    width: 155px;
+    font-size: larger;
+}
+
+.h1-buttom span{
+    color: aqua;
+    font-size: 24px;
+}
+
+.div{
+    
+    display: flex;
+    justify-content: space-around;
+    /* margin-top: 70px; */
+}
+.div button {
+    font-size: larger;
+    background-color: rgb(42, 127, 99);
+    color: aliceblue;
+    border: none;
+    border-radius: 50px;
+    width: 70px;
+    height: 40px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+.div a{
+
+    text-decoration: none;
+    color: rgb(42, 127, 99);
+}
+.imp{
+    
+    height: 50%;
+    color: aliceblue;
+    background-color: rgb(220, 246, 237);
+    width: 90%;
+    margin: auto;
+    border-radius: 10px;
+}
+.logoandtitle{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.logoandtitle  i{
+    font-size: 30px;
+    /* background-color: aqua; */
+    align-self: center;   
+    /* text-align: start;  */
+}
+
+
+
+
+
+.form{
+    /* display: none; */
+    border: 1px solid  rgb(44, 43, 43);
+    box-shadow: 20px  rgb(36, 36, 36);
+    background-color: rgb(36, 36, 36);
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    /* display: none; */
+    
+    
+
+}
+.form  .close{
+    
+  
+    background-color: rgb(36, 36, 36);
+    width: 30px;
+    height: 30px;
+    font-size: large;
+    color: aliceblue;    /* bottom: 20px; */
+    
+}
+.form-row input{
+    margin-top: 10px;
+    width: 280px;
+    border-radius: 10px;
+
+    height: 40px;
+    border: none;
+    color: aliceblue;
+    background-color: rgb(50, 50, 50);
+    box-shadow: 0px 0px 3px   ;
+    font-size: large;
+}
+.form-row input:hover{
+    
+    border: 1px solid palegreen;
+
+}
+#role{
+    box-shadow: 0px 0px 3px  ;
+    text-align: center;
+    margin-top: 10px;
+    width:280px;
+    border-radius: 10px;
+
+    height: 40px;
+    border: none;
+    margin-left: 44px;
+    color: aliceblue;
+    background-color: rgb(50, 50, 50); 
+    
+    
+}
+.form button{
+    width: 280px;
+}
+#form-addworker{
+    color: rgb(19, 136, 239);
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(38, 37, 37) ;
+    
+    margin-top: 30px;
+    margin-left: 84px;
+    border-radius: 10px;
+
+}
+
+
+
+@media (max-width:1300px)
+{
+    .cards-grid{
+        display: flex;
+        flex-wrap: wrap;
+        
+        
+        
+        
+    }
+   
+}
+
+@media (max-width:700px)
+{
+    .zone{
+        width: 100%;
+        
+        
+    }
+     .container {
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    .container header{
+        width: 100%;
+    }
+   
+}
