@@ -120,7 +120,8 @@ function createlement(worker) {
    
 
     
-    editboto.onclick = function(){
+    editboto.onclick = function()
+    {
 
        cardInfo.style.display = "block";
        
