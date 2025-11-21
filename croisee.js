@@ -6,21 +6,32 @@ const  Close = document.getElementById("close");
 const  form_addworke_button =  document.getElementById("form-addworke");
 
 const  Salledeconference = document.getElementById("Salledeconference");
-const container = document.getElementById("container");
+const container = document.getElementById("contai");
 const  SalleDuPersonnel = document.getElementById("SalleDuPersonnel");
 const SalledeSecuritE = document.getElementById("SalledeSecuritE");
 const  archives = document.getElementById("archives");
 const SalleDesServeurs = document.getElementById("SalleDesServeurs");
 
-
 const  employeeName = document.getElementById("employeeName");
 const  employeeEmail= document.getElementById("employeeEmail");
 const  employeePhone = document.getElementById("employeePhone");
 const  employeeZone = document.getElementById("employeeZone");
+const  employeeRole = document.getElementById("employeeRole");
 
+
+
+const  closecard = document.getElementById("closecardcards");
+const ALLcard = document.getElementById("cardAll");
+
+const botoadd = document.getElementById("botoadd")
+const botoadd2 = document.getElementById("botoadd2")
+const botoadd3 = document.getElementById("botoadd3")
+const botoadd4 = document.getElementById("botoadd4")
+const botoadd5 = document.getElementById("botoadd5")
+const botoadd6 = document.getElementById("botoadd6")
 //inputs var
 const namecomp = document.getElementById("namecomp");
-const all_inputs = document.querySelectorAll("input[name]")
+const all_inputs = document.querySelectorAll("#form [name")
 
 
 
@@ -30,9 +41,46 @@ const  form_addworker = document.getElementById("form-addworker");
 
 const  placeAllInfo = document.getElementById("placeAllInfo");
 
+
+
+
+// const  archives = document.getElementById("archives");
+let   cardunique ;
+// const container = document.getElementById("container");
+
+closecard.onclick = function () {
+    ALLcard.style.display = "none";
+    
+}
  ajoute_works.onclick  =  function show_form(){
     form.style.display = "block"; 
+    
 }
+
+
+
+botoadd.onclick = function (){ALLcard.style.display = "block"
+
+    cardunique =  Salledeconference;
+    
+    
+}
+botoadd2.onclick = function ()
+{
+    ALLcard.style.display = "block"
+    cardunique = container;
+
+}
+botoadd3.onclick = function ()
+{
+    ALLcard.style.display = "block";
+    cardunique = SalleDuPersonnel;
+}
+botoadd4.onclick = function (){ALLcard.style.display = "block"}
+botoadd5.onclick = function (){ALLcard.style.display = "block"}
+botoadd6.onclick = function (){ALLcard.style.display = "block"}
+
+
 
  
 
@@ -43,9 +91,9 @@ workerS.forEach(worker => createlement(worker));
 
 // console.log(JSON.parse(localStorage.getItem("works")));
 form_addworker.onclick  = function(){
+
     
-  
-    
+
     let worker = {};
 
     let index = 0;
@@ -74,21 +122,22 @@ form_addworker.onclick  = function(){
 }
 
 
-function createlement(worker) { 
+function createlement(worker){ 
 
-
-
+    
+    
     
     let newimployye = document.createElement("div");
     let img = document.createElement("img");
     let h3title = document.createElement("h5");
     let divedit = document.createElement("div");
-    let editboto = document.createElement("a");
-
-    img.src = worker.photo || "https://www.bing.com/images/search?view=detailV2&ccid=i%2F1HL4I1&id=36293A16CA5963514E1D4AC288D98B55CC1135F0&thid=OIP.i_1HL4I1H9SznR11omKPFwHaHo&mediaurl=https%3A%2F%2Fcanto-wp-media.s3.amazonaws.com%2Fapp%2Fuploads%2F2019%2F08%2F19194138%2Fimage-url-3.jpg&cdnurl=https%3A%2F%2Fth.bing.com%2Fth%2Fid%2FR.8bfd472f82351fd4b39d1d75a2628f17%3Frik%3D8DURzFWL2YjCSg%26pid%3DImgRaw%26r%3D0&exph=824&expw=800&q=url+img&FORM=IRPRST&ck=D83B0DEB3D6E8839583550834CB38EAD&selectedIndex=0&itb=0&cw=564&ch=701&ajaxhist=0&ajaxserp=0"; 
+    let editboto = document.createElement("button");
+    editboto.className = "editboto";
+    h3title.className = "h5";
+    
+    img.src = worker.photo || "https://tse3.mm.bing.net/th/id/OIP.7wm4zT59Oep7kXxMC_HgLgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3";
     h3title.textContent = worker.namecomp;
 
-    editboto.href = "#"; 
 
     editboto.textContent = "edit";
 
@@ -104,13 +153,18 @@ function createlement(worker) {
    
     
 
-    img.onclick = function (){
+    img.onclick = function ()
+    {
+        const imcard = document.getElementById("imgcard")
+        
         
         cardInfo.style.display = "block";
         employeeName.textContent = worker.namecomp;
-       employeeEmail.textContent = worker.email;
-       employeePhone.textContent = worker.phone;
-       employeeZone.textContent = worker.role
+        employeeEmail.textContent = worker.email;
+        employeePhone.textContent = worker.phone;
+        employeeRole.textContent = worker.role;
+       
+       console.log(worker);
     }
     
 
@@ -122,14 +176,12 @@ function createlement(worker) {
     
     editboto.onclick = function()
     {
-
-       cardInfo.style.display = "block";
-       
-       
-       
+        
+       cardInfo.style.display = "block";    
         
     }
-    closeCardInfo.onclick = function (){
+    closeCardInfo.onclick = function()
+    {
         cardInfo.style.display = "none"
         
     }
@@ -140,8 +192,97 @@ function createlement(worker) {
     newimployye.appendChild(divedit);
     divedit.appendChild(editboto);
 
+    
+    
+    const copy = newimployye.cloneNode(true);
+   
+    
+
     placeAllInfo.appendChild(newimployye);
+    
+    
+    
+    
+
+    
+
+    ALLcard.appendChild(copy); 
+    const editH5  = copy.querySelector(".h5");
+    const editBtnClone = copy.querySelector(".editboto");
+
+     //   const buttons = document.querySelectorAll(".editBtn");
+
+  
+    //    const btn = document.getElementById("botoadd4");
+editBtnClone.onclick = function () {
+    const card = document.createElement("div");
+    card.className = "employee-card";
+    card.style.display = "flex";
+    card.style.alignItems = "center";
+    card.style.padding = "10px";
+    card.style.border = "1px solid #ccc";
+    card.style.borderRadius = "10px";
+    card.style.marginBottom = "5px";
+
+    const img = document.createElement("img");
+    img.src = worker.photo || "https://mobingasht.ir/Content/Website/img/1.jpg";
+    img.style.width = "50px";
+    img.style.height = "50px";
+    img.style.borderRadius = "50%";
+    img.style.marginRight = "10px";
+
+    const span = document.createElement("span");
+    span.textContent = worker.namecomp + " - ";
+
+    const roleSpan = document.createElement("strong");
+    const role = worker.role;
+
+    if (role === "Manager") {
+        roleSpan.textContent = "Full Access";
+        roleSpan.style.color = "green";
+    } else if (role === "IT Technician") {
+        roleSpan.textContent = "Limited Access";
+        roleSpan.style.color = "orange";
+    } else if (role === "Receptionist") {
+        roleSpan.textContent = "View Only";
+        roleSpan.style.color = "blue";
+    } else if (role === "Security Agent") {
+        roleSpan.textContent = "Security Access";
+        roleSpan.style.color = "purple";
+    } else if (role === "Cleaning") {
+        roleSpan.textContent = "Cleaning Staff";
+        roleSpan.style.color = "gray";
+    } else {
+        roleSpan.textContent = "No Role Assigned";
+        roleSpan.style.color = "red";
+    }
+
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Delete";
+    deleteBtn.style.marginLeft = "auto";
+    deleteBtn.onclick = () => card.remove();
+
+    card.appendChild(img);
+    card.appendChild(span);
+    card.appendChild(roleSpan);
+    card.appendChild(deleteBtn);
+
+    cardunique.appendChild(card);
+};
+
+
+
+    
+
+
+    editBtnClone.textContent = "ADD"
+    editBtnClone.style.backgroundColor = "orange";
+
 }
+
+
+
+
 
 
 
