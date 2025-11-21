@@ -91,6 +91,7 @@ botoadd6.onclick = function ()
 {
     
     ALLcard.style.display = "block"
+    cardunique = archives;
 }
 
 
