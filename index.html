@@ -51,12 +51,12 @@
                 </div>
                 <a href=""> <label for="">Amine elarar</label></a>
 
-                <div  class="">
+                <!-- <div  class=""> -->
 
-                    <a href="">edit</a>
+                    <!-- <a href="">edit</a> -->
 
                     
-                </div>
+                <!-- </div> -->
 
             </div>
             
@@ -105,12 +105,13 @@
                          <div class="form-row">
                           <label for="photo">Photo URL</label>
                            <input type="url" id="photo" name="photo" placeholder="Photo URL">
-                       </div>
+                    </div>
+                   
                  
                     <div>
-                   <label for="role">Role</label>
+                   <label >Role</label>
                    <select  id="role" name="role" required>
-                    <option value="">Select Role</option>
+                    <option value=""> Select Role</option>
                     <option value="Manager">Manager</option>
                       <option value="Receptionist">Receptionist</option>
                         <option value="IT Technician">IT Technician</option>
@@ -119,6 +120,10 @@
                              <option value="Other">Other</option>
                             </select>
                        </div>
+                        <div class="form-row">
+                          <label for="photo">experience</label>
+                           <input type="url" id="photo" name="photo" placeholder="Photo URL">
+                    </div>
                         <button  id="form-addworker" > Add workers</button>
                       
             </div>
@@ -142,7 +147,7 @@
                 </div>
                 <div class="div">
                     <h4> <a href="">show more</a></h4>
-                    <button type="submit"  class="botoadd" >+</button>
+                    <button type="submit"  id="botoadd" >+</button>
                 </div>
                 
                </div>
@@ -151,12 +156,12 @@
                      <i class="fa-solid fa-bell-concierge" style="color: rgb(42, 127, 99);"></i>
                      <h2>container</h2>  
                      </div>
-                <div  id="container" class="imp">
+                <div id="contai" class="imp">
                     
                 </div>
                 <div class="div">
                     <h4> <a href="">show more</a></h4>
-                    <button type="submit"  class="botoadd" >+</button>
+                    <button type="submit"   id="botoadd2" >+</button>
                 </div>
     </div>
                <div class="zone">
@@ -173,7 +178,7 @@
                 </div>
                 <div class="div">
                     <h4> <a href="">show more</a></h4>
-                    <button type="submit"  class="botoadd" >+</button>
+                    <button type="submit"   id="botoadd3" >+</button>
                 </div>
             </div>
                <div class="zone">
@@ -187,7 +192,7 @@
                 </div>
                 <div class="div">
                     <h4> <a href="">show more</a></h4>
-                    <button type="submit"  class="botoadd" >+</button>
+                    <button type="submit"  id="botoadd4">+</button>
                 </div>
             </div>
                <div class="zone">
@@ -198,11 +203,11 @@
                      </div>
                 
                 <div  id="SalleDesServeurs" class="imp">
-                    v
+                    
                 </div>
                 <div class="div">
                     <h4> <a href="">show more</a></h4>
-                    <button type="submit"  class="botoadd" >+</button>
+                    <button type="submit"   id="botoadd5" >+</button>
                 </div>
 
 
@@ -216,12 +221,14 @@
                      <h2>Salle d’archives</h2>
                      </div>
                 
-                <div  id="archives" class="imp">
-                    v
+                <div  id="archives" id="imp" >
+
+                    
+                    
                 </div>
                 <div class="div">
                     <h4> <a href="">show more</a></h4>
-                    <button type="submit"  class="botoadd" >+</button>
+                    <button type="submit"   id="botoadd6" >+</button>
                 </div>
 
             
@@ -238,7 +245,7 @@
   <h3>Employee Profile</h3>
 
   <div class="employee-photo">
-    <img src="Profile-PNG-Photo.png" alt="Employee Photo" id="employeePhoto">
+    <img id="imgcard" src="" alt="Employee Photo" id="employeePhoto">
   </div>
 
   <div class="employee-info">
@@ -253,9 +260,25 @@
     <h4>Professional Experiences</h4>
     <ul id="employeeExperiences">
     </ul>
-  </div>
+  </div> 
 
-  <button id="closeCardInfo">Close</button>
+  <div class="btns">
+    <button  id="delete">Delete</button>
+    <button id="closeCardInfo">Close</button>
+    
+  </div>
+</div>
+
+<div id="cardAll" >
+
+    <div  class=" closecardALL">
+        <h3>Al workers</h3>
+        <button id="closecardcards">X</button>
+
+    </div>
+
+    
+     
 </div>
 
 
