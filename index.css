@@ -308,25 +308,50 @@ body{
 }
 
 #cardInfo{
-    text-align: center ;
+    /* text-align: center ; */
    
-      width: 80%;
-     height: 80%;
+      width: 500px;
+     height: 600px;
      position: fixed;     
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%); 
-      background: #427f63;
-      color: white; 
+      background-color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
       padding: 20px;
-      border-radius: 10px;
-      display: none;
-      /* overflow: auto; */
+      border-radius:10px;
+      
+      /* display: none;  */
+      overflow: auto;
+      
+}
+.employee-info{
+
+    border: #427f63 1px ;
+
+    box-shadow: 0px 0px 4px   #427f63 ;
+    padding: 10px;
+    margin-top: 50px;
+    
+    
+}
+.employee-experiences
+{
+     color: #427f63;
+    margin-left: 50px;
 }
 
-#cardInfo  img{
-    width: 90px;
-    height: 90px;
+#imgcard{
+
+    box-shadow: 0px 0px 4px  green;
+    
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    align-items: center;
+    margin: auto;
+    margin-left: 40%;
+
 }
 #cardInfo  button{
     padding: 5px;
@@ -342,8 +367,7 @@ body{
 
     display: flex;
     justify-content: space-around;
-    position: relative;
-    top:150px;
+   
     
 }
 .btns #delete{
