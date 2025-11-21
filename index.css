@@ -17,10 +17,9 @@ body{
     color: aliceblue;
     text-align: center;
     width: 350px;
-     padding-top: auto ;
-    /* position: fixed;    */
-    /* left: 0;
-    top: 0; */
+    height:800px;
+    overflow: auto;
+   
    
 }
 .container header h2{
@@ -119,8 +118,8 @@ body{
 
 .infoimployees{
     border-radius: 20px;
-    
-    background-color: rgb(0, 0, 0);
+     background-color: rgb(42, 127, 99);
+    /* background-color: rgb(56, 57, 59); */
     display: flex;
     padding: 16px;
     justify-content: space-around;
@@ -208,9 +207,9 @@ body{
     color: rgb(42, 127, 99);
 }
 .imp{
-    
+    overflow: auto;
     height: 50%;
-    color: aliceblue;
+    color: rgba(0, 116, 218, 0.851);
     background-color: rgb(220, 246, 237);
     width: 90%;
     margin: auto;
@@ -237,11 +236,13 @@ body{
     /* display: none; */
     border: 1px solid  rgb(44, 43, 43);
     box-shadow: 20px  rgb(36, 36, 36);
-    background-color: rgb(36, 36, 36);
+    background-color: rgb(255, 255, 255);
     width: 80%;
+    color: black;
     margin: auto;
     padding: 10px;
     display: none;
+    border-radius: 20px;
     
     
 
@@ -262,10 +263,10 @@ body{
     border-radius: 10px;
 
     height: 40px;
-    border: none;
-    color: aliceblue;
-    background-color: rgb(50, 50, 50);
-    box-shadow: 0px 0px 3px   ;
+    border: 1px solid rgb(224, 221, 221);
+    color: rgb(0, 0, 0);
+    
+    box-shadow: 0px 0px 10px white  ;
     font-size: large;
 }
 .form-row input:hover{
@@ -292,14 +293,17 @@ body{
     width: 280px;
 }
 #form-addworker{
-    color: rgb(19, 136, 239);
+    /* color: rgb(19, 136, 239); */
     padding: 10px;
+    color: aliceblue;
     text-align: center;
-    background-color: rgb(38, 37, 37) ;
-    
+    background-color: rgb(0, 208, 66) ;
+    font-size: larger;
     margin-top: 30px;
     margin-left: 84px;
     border-radius: 10px;
+    border: none;
+    box-shadow: 1px 1px 10px green;
 
 }
 
@@ -317,6 +321,7 @@ body{
       padding: 20px;
       border-radius: 10px;
       display: none;
+      /* overflow: auto; */
 }
 
 #cardInfo  img{
@@ -333,6 +338,96 @@ body{
     
 }
 
+.btns{
+
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top:150px;
+    
+}
+.btns #delete{
+    padding: 10px;
+    background-color:red;
+    color: aliceblue;
+    border-radius: 7px;
+    font-size: larger;
+}
+#closeCardInfo{
+    font-size: large;
+    border-radius: 10px;
+    
+}
+
+#cardAll{
+
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    overflow: auto;
+    width: 400px;
+    height: 400px ;
+    background-color: rgb(226, 226, 226);
+    padding: 20px;
+    display: none;
+    border-radius: 30px; 
+
+    
+}
+.h5{
+    color: aliceblue;
+
+}
+
+.editboto{
+
+
+    
+    /* background-color: orange; */
+   background-color: orange;
+   border-radius: 10px;
+   width: 80px;
+   border: none;
+   padding: 10px;
+    text-decoration: none;
+     
+    
+     
+
+}
+
+.closecardALL{
+    display: flex;
+    justify-content: space-between;
+
+
+}
+.closecardALL h3{
+    color: #427f63;
+    font-size: 30px;
+}
+.closecardALL  button{
+
+    background:none;
+    border: none;
+    font-size: 30px;
+    color: rgb(145, 189, 35);
+    margin-bottom: 20px;
+}
+
+
+.delet{
+    background-color: red;
+    padding: 10px;
+    border-radius: 10px;
+    border: none ;
+    color: aliceblue;
+    
+    
+
+}
 
 
 
