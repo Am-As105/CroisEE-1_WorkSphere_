@@ -76,9 +76,22 @@ botoadd3.onclick = function ()
     ALLcard.style.display = "block";
     cardunique = SalleDuPersonnel;
 }
-botoadd4.onclick = function (){ALLcard.style.display = "block"}
-botoadd5.onclick = function (){ALLcard.style.display = "block"}
-botoadd6.onclick = function (){ALLcard.style.display = "block"}
+botoadd4.onclick = function ()
+{
+    ALLcard.style.display = "block";
+    cardunique = SalledeSecuritE;
+    
+}
+botoadd5.onclick = function ()
+{
+    ALLcard.style.display = "block";
+    cardunique = SalleDesServeurs;
+}
+botoadd6.onclick = function ()
+{
+    
+    ALLcard.style.display = "block"
+}
 
 
 
@@ -141,7 +154,7 @@ function createlement(worker){
 
     editboto.textContent = "edit";
 
-    editboto.style.backgroundColor = "green";
+    // editboto.style.backgroundColor = "";
     editboto.style.color = "white";
 
     newimployye.className = "infoimployees"; 
@@ -219,6 +232,7 @@ editBtnClone.onclick = function () {
     card.className = "employee-card";
     card.style.display = "flex";
     card.style.alignItems = "center";
+
     card.style.padding = "10px";
     card.style.border = "1px solid #ccc";
     card.style.borderRadius = "10px";
@@ -249,7 +263,7 @@ editBtnClone.onclick = function () {
     } else if (role === "Security Agent") {
         roleSpan.textContent = "Security Access";
         roleSpan.style.color = "purple";
-    } else if (role === "Cleaning") {
+    } else if (role === "Cleaning"){
         roleSpan.textContent = "Cleaning Staff";
         roleSpan.style.color = "gray";
     } else {
@@ -258,14 +272,18 @@ editBtnClone.onclick = function () {
     }
 
     const deleteBtn = document.createElement("button");
+    deleteBtn.className = "delet"; 
     deleteBtn.textContent = "Delete";
     deleteBtn.style.marginLeft = "auto";
+    
     deleteBtn.onclick = () => card.remove();
+        
+    
 
-    card.appendChild(img);
+    card.appendChild(img); 
     card.appendChild(span);
     card.appendChild(roleSpan);
-    card.appendChild(deleteBtn);
+    card.appendChild(deleteBtn); 
 
     cardunique.appendChild(card);
 };
