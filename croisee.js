@@ -96,7 +96,6 @@ botoadd6.onclick = function ()
 
 
 
- 
 
 let workerS = [];
 workerS = JSON.parse(localStorage.getItem("works")) || []; ;  
@@ -240,34 +239,43 @@ editBtnClone.onclick = function () {
     card.style.marginBottom = "5px";
 
     const img = document.createElement("img");
-    img.src = worker.photo || "https://mobingasht.ir/Content/Website/img/1.jpg";
+    img.src = worker.photo;
     img.style.width = "50px";
     img.style.height = "50px";
     img.style.borderRadius = "50%";
     img.style.marginRight = "10px";
 
     const span = document.createElement("span");
-    span.textContent = worker.namecomp + " - ";
-
+    span.textContent = worker.namecomp + " - "; 
+    
     const roleSpan = document.createElement("strong");
     const role = worker.role;
 
-    if (role === "Manager") {
+
+    
+
+    if (role === "Manager") 
+    {
         roleSpan.textContent = "Full Access";
         roleSpan.style.color = "green";
-    } else if (role === "IT Technician") {
+    } else if (role === "IT Technician")
+    {
         roleSpan.textContent = "Limited Access";
         roleSpan.style.color = "orange";
-    } else if (role === "Receptionist") {
+    } else if (role === "Receptionist") 
+    {
         roleSpan.textContent = "View Only";
         roleSpan.style.color = "blue";
-    } else if (role === "Security Agent") {
+    } else if (role === "Security Agent")
+    {
         roleSpan.textContent = "Security Access";
         roleSpan.style.color = "purple";
-    } else if (role === "Cleaning"){
+    } else if (role === "Cleaning")
+    {
         roleSpan.textContent = "Cleaning Staff";
         roleSpan.style.color = "gray";
-    } else {
+    } else
+     {
         roleSpan.textContent = "No Role Assigned";
         roleSpan.style.color = "red";
     }
