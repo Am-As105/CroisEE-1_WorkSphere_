@@ -100,7 +100,7 @@ botoadd6.onclick = function ()
 const input_name = document.getElementById("name");
 const input_email = document.getElementById("email");
 const input_phone = document.getElementById("phone");
-const input_photo = document.getElementById("phone");
+const input_photo = document.getElementById("photo");
 const input_role  = document.getElementById("role");
 
 
@@ -151,7 +151,10 @@ function check_email(input_email){
 }
 
 
-function chack_slect_role(input_role){
+function check_img(url){
+
+    const regex = /\.(jpg|jpeg|png|gif|webp|bmp|svg)$/i;
+    return regex.test(url);
 
     
     
@@ -184,6 +187,15 @@ form_addworker.onclick  = function(){
         alert("Please choose something");
         return;
     }
+    if (check_img(input_photo.value)){
+        console.log("fff");
+    }
+    else{
+        alert("img  not valid");
+        return;
+
+    }
+        
     
 
     let worker = {};
@@ -328,36 +340,40 @@ editBtnClone.onclick = function () {
     span.textContent = worker.namecomp + " - "; 
     
     const roleSpan = document.createElement("strong");
-    const role = worker.role;
+   
 
 
     
 
-    if (role === "Manager") 
-    {
-        roleSpan.textContent = "Full Access";
-        roleSpan.style.color = "green";
-    } else if (role === "IT Technician")
-    {
-        roleSpan.textContent = "Limited Access";
-        roleSpan.style.color = "orange";
-    } else if (role === "Receptionist") 
-    {
-        roleSpan.textContent = "View Only";
-        roleSpan.style.color = "blue";
-    } else if (role === "Security Agent")
-    {
-        roleSpan.textContent = "Security Access";
-        roleSpan.style.color = "purple";
-    } else if (role === "Cleaning")
-    {
-        roleSpan.textContent = "Cleaning Staff";
-        roleSpan.style.color = "gray";
-    } else
-     {
-        roleSpan.textContent = "No Role Assigned";
-        roleSpan.style.color = "red";
+       const zone = cardunique.id; 
+      const role = worker.role;
+
+     function canAccess(role, zone) {
+     if(role === "Manager")
+          return true;
+     if(role === "Receptionist" && zone === "Salledeconference")
+         return false 
+      if(role === "Receptionist" && zone === "Réception") 
+        return true;
+      if(role === "IT Technician" && zone === "SalleDesServeurs")
+         return true;
+      if(role === "IT Technician" && zone !== "SalleDesServeurs") 
+        return false;
+      if(role === "Security Agent" && zone === "SalledeSecuritE") 
+        return true;
+      if(role === "Cleaning" && zone !== "archives") 
+        return true
+      if(role === "Cleaning" && zone === "archives") return false;
+       return true; 
     }
+
+    
+   if(!canAccess(role, zone)) {
+    alert("worker not have perm");
+    return; 
+    }
+
+
 
     const deleteBtn = document.createElement("button");
     deleteBtn.className = "delet"; 
@@ -374,6 +390,10 @@ editBtnClone.onclick = function () {
     card.appendChild(deleteBtn); 
 
     cardunique.appendChild(card);
+
+    worker.style.display = "none";
+
+    
 };
 
 
@@ -385,23 +405,6 @@ editBtnClone.onclick = function () {
     editBtnClone.style.backgroundColor = "orange";
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
