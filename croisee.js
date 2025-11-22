@@ -151,27 +151,39 @@ function check_email(input_email){
 }
 
 
-form_addworker.onclick  = function(){
-     
+function chack_slect_role(input_role){
+
     
+    
+}
+
+
+form_addworker.onclick  = function(){
+
+    if (count_inputs(input_name.value) < 10){
+        alert("The name must be 10 char")   
+    }
+     
+    if (check_email(input_email.value) !== 1){
+        alert("email not valid exmple = amine@gmail.com");
+        
+    }else 
+        console.log("gggg");
     if (count_inputs(input_phone.value) !== 10){
-        alert("please number must 10");
+        alert("please  the number must  be 10 numbers");
         
         return;
         
     }
     if (check_number_only(input_phone.value) !== 1){
-        alert("kkkkkk");
+        alert(" the number ");
         return ;
         
+    } 
+    if (input_role.value === ""){
+        alert("Please choose something");
+        return;
     }
-    else
-        console.log("hhhh")
-
-    if (check_email(input_email.value) !== 1){
-        
-    }
-
     
 
     let worker = {};
