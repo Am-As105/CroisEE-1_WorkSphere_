@@ -29,9 +29,13 @@ const botoadd3 = document.getElementById("botoadd3")
 const botoadd4 = document.getElementById("botoadd4")
 const botoadd5 = document.getElementById("botoadd5")
 const botoadd6 = document.getElementById("botoadd6")
-//inputs var
+
 const namecomp = document.getElementById("namecomp");
 const all_inputs = document.querySelectorAll("#form [name")
+
+
+
+
 
 
 
@@ -44,9 +48,9 @@ const  placeAllInfo = document.getElementById("placeAllInfo");
 
 
 
-// const  archives = document.getElementById("archives");
+
 let   cardunique ;
-// const container = document.getElementById("container");
+
 
 closecard.onclick = function () {
     ALLcard.style.display = "none";
@@ -54,16 +58,13 @@ closecard.onclick = function () {
 }
  ajoute_works.onclick  =  function show_form(){
     form.style.display = "block"; 
-    
+   
 }
 
 
 
 botoadd.onclick = function (){ALLcard.style.display = "block"
-
-    cardunique =  Salledeconference;
-    
-    
+    cardunique =  Salledeconference; 
 }
 botoadd2.onclick = function ()
 {
@@ -96,14 +97,80 @@ botoadd6.onclick = function ()
 
 
 
+const input_name = document.getElementById("name");
+const input_email = document.getElementById("email");
+const input_phone = document.getElementById("phone");
+const input_photo = document.getElementById("phone");
+const input_role  = document.getElementById("role");
+
+
+
+
 
 let workerS = [];
-workerS = JSON.parse(localStorage.getItem("works")) || []; ;  
-
+workerS = JSON.parse(localStorage.getItem("works")) || [] ;  
 workerS.forEach(worker => createlement(worker));
 
-// console.log(JSON.parse(localStorage.getItem("works")));
+
+function count_inputs(value){
+    let  i = 0;
+
+    while( value[i] !== undefined)
+    {
+        i++;
+    }
+    return i;
+    
+}
+function check_number_only(input_phone){
+    
+    let i = 0;
+    while (input_phone[i] !== undefined){
+        
+        if (input_phone[i] >= 0 && input_phone[i] <= 9)
+            i++;
+            
+        else
+            return 0;
+    }
+    return 1;  
+}
+
+function check_email(input_email){
+
+    let i = 0;
+
+    while (input_email[i] !== undefined){
+        if (input_email[i] ===  "@")
+            return 1;
+        else 
+            i++;
+    }
+    return 0;
+    
+}
+
+
 form_addworker.onclick  = function(){
+     
+    
+    if (count_inputs(input_phone.value) !== 10){
+        alert("please number must 10");
+        
+        return;
+        
+    }
+    if (check_number_only(input_phone.value) !== 1){
+        alert("kkkkkk");
+        return ;
+        
+    }
+    else
+        console.log("hhhh")
+
+    if (check_email(input_email.value) !== 1){
+        
+    }
 
     
 
