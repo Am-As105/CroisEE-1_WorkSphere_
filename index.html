@@ -35,7 +35,7 @@
             </nav>
 
 
-            <h4>staff Members(unassined)</h4>
+            <h4></h4>
             
             <div id="placeAllInfo">
                 
@@ -43,13 +43,13 @@
                 
                 
 
-                <img src="Profile-PNG-Photo.png" alt="photo">
+                
                 
 
                 <div>
 
                 </div>
-                <a href=""> <label for="">Amine elarar</label></a>
+                <a href=""> <label for="">staff Members(unassined) </label></a>
 
                 <!-- <div  class=""> -->
 
@@ -80,36 +80,47 @@
 
             <div  id="form"  class="form">
 
-                <button class="close">x</button>
+                <button id="close">x</button>
 
                  <h3>Add New Worker</h3>
 
 
                
                 <div class="form-row">
-                    <label for="name">Name com</label>
-                  <input type="text" id="name" name="namecomp" required>
+                   <div>
+                     <label for="name">Complete Name</label>
+                   </div>
+                   <div>
+                    <input type="text" id="name" name="namecomp" required>
+
+                   </div>
 
                 </div>
                  <div class="form-row">
-                        <label for="email">Email imp-</label>
+                        <div>
+                            <label for="email">Email </label>
+                        </div>
                          <input type="email" id="email" name="email" required>
 
                        </div>
 
                           <div class="form-row">
-                         <label for="phone">Phone imp</label>
+                          <div>
+                             <label for="phone">Phone</label>
+                          </div>
                           <input type="tel" id="phone" name="phone">
                          </div>
 
                          <div class="form-row">
-                          <label for="photo">Photo URL</label>
+                         <div>
+                             <label for="photo">photo</label>
+                         </div>
                            <input type="url" id="photo" name="photo" placeholder="Photo URL">
                     </div>
                    
                  
                     <div>
-                   <label >Role</label>
+                   <div><label >Role</label></div>
                    <select  id="role" name="role" required>
                     <option value=""> Select Role</option>
                     <option value="Manager">Manager</option>
@@ -121,8 +132,38 @@
                             </select>
                        </div>
                         <div class="form-row">
-                          <label for="photo">experience</label>
-                           <input type="url" id="photo" name="photo" placeholder="Photo URL">
+                          <div>
+                            <label for="photo">experience</label>
+                          </div>
+                           <input type="url" id="photo" name="photo" placeholder="">
+
+                            <div>
+                                 <button  style="width: 60px  ; margin-top: 10px;" class="addexp">+ more exp</button>
+
+                            </div>                            
+
+                           <div id="placeExp">
+                            <div>
+                                 <label for="photo">experience</label>
+                            </div>
+                           <input type="url" id="photo" name="photo" placeholder="">
+                           <div>
+                             <label >experience</label>
+                             <input  id="photo" name="photo" placeholder="">
+                           </div>
+                           <div>
+                             <label for="photo">experience</label>
+                             <input type="url" id="photo" name="photo" placeholder="">
+                           </div>
+                            <div>
+                                 <button  style="width: 60px  ; margin-top: 10px;" class="addexp">+ more exp</button>
+
+                            </div> 
+
+                            
+                             
+                           </div>
+
                     </div>
                         <button  id="form-addworker" > Add workers</button>
                       
@@ -272,7 +313,7 @@
 <div id="cardAll" >
 
     <div  class=" closecardALL">
-        <h3>All workers</h3>
+        <h3>All workers </h3>
         <button id="closecardcards">X</button>
 
     </div>
