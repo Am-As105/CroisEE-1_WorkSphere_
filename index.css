@@ -75,6 +75,11 @@ body{
 
 
 }
+.infoimployees{
+    display: grid;
+    flex-wrap: wrap;
+
+}
 .zone{
     border: 1px solid;
     width: 380px;
@@ -136,6 +141,7 @@ body{
 .infoimployees img{
     
     width: 40px;
+    border-radius: 50%;
     height: 40px;
 }
 
@@ -231,7 +237,16 @@ body{
 
 
 
+.addexp{
+    background-color: #427f63;
+   color: white;
+   border: none;
+   
+   
+   
+    
 
+}
 .form{
     /* display: none; */
     border: 1px solid  rgb(44, 43, 43);
@@ -247,7 +262,7 @@ body{
     
 
 }
-.form  .close{
+.form  #close{
     
   
     background-color: rgb(36, 36, 36);
@@ -259,7 +274,7 @@ body{
 }
 .form-row input{
     margin-top: 10px;
-    width: 280px;
+    width: 90%;
     border-radius: 10px;
 
     height: 40px;
@@ -268,22 +283,26 @@ body{
     
     box-shadow: 0px 0px 10px white  ;
     font-size: large;
+    margin: 10px;
 }
 .form-row input:hover{
     
     border: 1px solid palegreen;
 
 }
+
+
+
 #role{
     box-shadow: 0px 0px 3px  ;
     text-align: center;
     margin-top: 10px;
-    width:280px;
+    width: 90%;
     border-radius: 10px;
 
     height: 40px;
     border: none;
-    margin-left: 44px;
+   
     color: aliceblue;
     background-color: rgb(50, 50, 50); 
     
@@ -293,6 +312,7 @@ body{
     width: 280px;
 }
 #form-addworker{
+    width: 90%;
     /* color: rgb(19, 136, 239); */
     padding: 10px;
     color: aliceblue;
@@ -300,7 +320,7 @@ body{
     background-color: rgb(0, 208, 66) ;
     font-size: larger;
     margin-top: 30px;
-    margin-left: 84px;
+   
     border-radius: 10px;
     border: none;
     box-shadow: 1px 1px 10px green;
@@ -325,6 +345,7 @@ body{
       overflow: auto;
       
 }
+
 .employee-info{
 
     border: #427f63 1px ;
@@ -456,33 +477,94 @@ body{
 
 
 
-@media (max-width:1300px)
-{
-    .cards-grid{
-        display: flex;
+
+
+
+
+
+@media (max-width: 767px){
+
+    
+
+    .container {
         flex-wrap: wrap;
-        
-        
-        
-        
     }
-   
+
+    .container header {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid rgb(237, 221, 221);
+    }
+
+    .cards {
+        width: 100%;
+    }
+
+    .cards-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 95%;
+    }
+
+    .zone {
+        width: 100%;
+        height: auto;
+    }
+
+    .form {
+        width: 95%;
+    }
+
+    .form input,
+    #role,
+    .form button {
+        width: 90%;
+    }
+
+    #role {
+        margin-left: 0;
+    }
 }
 
-@media (max-width:700px)
-{
-    .zone{
-        width: 100%;
-        
-        
-    }
-     .container {
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .container {
         display: flex;
         flex-wrap: wrap;
-        
     }
-    .container header{
+
+    .container header {
+        width: 100%;
+        height: auto;
+        /* border-right: none; */
+        border-bottom: 1px solid rgb(237, 221, 221);
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        width: 95%;
+    }
+
+    .zone {
         width: 100%;
     }
-   
+
 }
+@media (min-width: 1024px) and (max-width: 1279px) {
+
+    .container header {
+        width: 280px;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .zone {
+        width: 100%;
+    }
+}
+
