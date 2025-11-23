@@ -49,6 +49,12 @@ const  placeAllInfo = document.getElementById("placeAllInfo");
 
 
 
+Close.onclick = function (){
+    form.style.display = "none"
+    
+}
+
+
 let   cardunique ;
 
 
