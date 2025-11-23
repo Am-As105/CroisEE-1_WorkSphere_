@@ -149,14 +149,10 @@ function check_email(input_email){
     return 0;
     
 }
-
-
 function check_img(url){
 
     const regex = /\.(jpg|jpeg|png|gif|webp|bmp|svg)$/i;
     return regex.test(url);
-
-    
     
 }
 
@@ -318,7 +314,7 @@ function createlement(worker){
 
   
     //    const btn = document.getElementById("botoadd4");
-editBtnClone.onclick = function () {
+     editBtnClone.onclick = function () {
     const card = document.createElement("div");
     card.className = "employee-card";
     card.style.display = "flex";
@@ -337,13 +333,10 @@ editBtnClone.onclick = function () {
     img.style.marginRight = "10px";
 
     const span = document.createElement("span");
-    span.textContent = worker.namecomp + " - "; 
+    span.textContent = worker.namecomp ; 
     
     const roleSpan = document.createElement("strong");
    
-
-
-    
 
        const zone = cardunique.id; 
       const role = worker.role;
@@ -380,8 +373,7 @@ editBtnClone.onclick = function () {
     deleteBtn.textContent = "Delete";
     deleteBtn.style.marginLeft = "auto";
     
-    deleteBtn.onclick = () => card.remove();
-        
+    deleteBtn.onclick = () => card.remove();    
     
 
     card.appendChild(img); 
@@ -389,9 +381,14 @@ editBtnClone.onclick = function () {
     card.appendChild(roleSpan);
     card.appendChild(deleteBtn); 
 
+    //remove after add 
+    newimployye.remove();
+    copy.remove();
+
+
     cardunique.appendChild(card);
 
-    worker.style.display = "none";
+    
 
     
 };
