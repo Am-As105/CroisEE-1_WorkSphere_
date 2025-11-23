@@ -46,7 +46,17 @@ const  form_addworker = document.getElementById("form-addworker");
 const  placeAllInfo = document.getElementById("placeAllInfo");
 
 
+const addexp = document.getElementById("addexp");
+const  placeExp = document.getElementById("placeExp");
 
+addexp.onclick = function (){
+
+    addexp.style.display = "none";
+
+     
+     placeExp.style.display = "block";
+    
+}
 
 
 Close.onclick = function (){
