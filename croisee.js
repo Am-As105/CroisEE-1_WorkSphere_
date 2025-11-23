@@ -102,7 +102,6 @@ botoadd6.onclick = function ()
 }
 
 
-
 const input_name = document.getElementById("name");
 const input_email = document.getElementById("email");
 const input_phone = document.getElementById("phone");
@@ -305,11 +304,6 @@ function createlement(worker){
     
 
     placeAllInfo.appendChild(newimployye);
-    
-    
-    
-    
-
     
 
     ALLcard.appendChild(copy); 
