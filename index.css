@@ -70,8 +70,11 @@ body{
     
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(2,1fr);
-    margin-top: 100px;
+    margin-top: 70px;
+    margin-left: 20px;
     gap: 20px;
+    /* margin: 0; */
+    /* margin-right: 33px; */
 
 
 }
@@ -237,10 +240,13 @@ body{
 
 
 
-.addexp{
+#addexp{
     background-color: #427f63;
    color: white;
    border: none;
+   border-radius: 10px;
+   
+   width: 20px;
    
    
    
@@ -280,6 +286,7 @@ body{
     height: 40px;
     border: 1px solid rgb(224, 221, 221);
     color: rgb(0, 0, 0);
+    background-color: #f2fcf7;
     
     box-shadow: 0px 0px 10px white  ;
     font-size: large;
@@ -473,7 +480,11 @@ body{
     
 
 }
-
+ #cardInfo{
+        
+        box-shadow: 0px 0px 20px #427f63;
+        
+    }
 
 
 
@@ -526,8 +537,51 @@ body{
     #role {
         margin-left: 0;
     }
+    #cardInfo{
+        width: 80%;
+        box-shadow: 0px 0px 20px #427f63;
+        
+    }
+    #cardAll{
+        width: 80%;
+    }
 }
 
+
+.footer{
+    height: 50px;
+    /* background-color: #012101; */
+    color: aliceblue;
+
+}
+.footer p {
+
+    text-align: center;
+    padding: 17px;
+}
+ i {
+    color: #a4f0cc;   
+    font-size: 30px;    
+}
+i:hover{
+    color: aliceblue;
+    
+    
+}
+.media{
+    
+    
+    margin-top: 40px;
+    display: grid;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.Dashboard{
+    display: flex;
+    
+}
 @media (min-width: 768px) and (max-width: 1023px) {
 
     .container {
