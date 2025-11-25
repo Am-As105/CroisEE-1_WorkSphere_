@@ -124,7 +124,7 @@ body{
     transition: 1s;
 }
 
-.infoimployees{
+.infoimployees ,.infoemp2{
     border-radius: 20px;
      background-color: rgb(42, 127, 99);
     /* background-color: rgb(56, 57, 59); */
@@ -137,11 +137,11 @@ body{
 
 }
 
-.infoimployees  a{
+.infoimployees  a  ,.infoemp2 a{
     /* background-color: aliceblue; */
     margin: 0px;
 }
-.infoimployees img{
+.infoimployees img ,.infoemp2 img{
     
     width: 40px;
     border-radius: 50%;
