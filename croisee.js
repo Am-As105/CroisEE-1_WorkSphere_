@@ -52,8 +52,6 @@ const  placeExp = document.getElementById("placeExp");
 addexp.onclick = function (){
 
     addexp.style.display = "none";
-
-     
      placeExp.style.display = "block";
     
 }
@@ -117,14 +115,17 @@ const input_email = document.getElementById("email");
 const input_phone = document.getElementById("phone");
 const input_photo = document.getElementById("photo");
 const input_role  = document.getElementById("role");
-
+const employeeExperiences = document.getElementById("employeeExperiences");
+const   exp1 = document.getElementById("exp1");
+const   exp2 = document.getElementById("exp2");
+const   exp3 = document.getElementById("exp3");
 
 
 
 
 let workerS = [];
-workerS = JSON.parse(localStorage.getItem("works")) || [] ;  
-workerS.forEach(worker => createlement(worker));
+// workerS = JSON.parse(localStorage.getItem("works")) || [] ;  
+// workerS.forEach(worker => createlement(worker));
 
 
 function count_inputs(value){
@@ -172,17 +173,46 @@ function check_img(url){
 }
 
 
+
+
+function check_email_repeat(para)
+{
+    let i = 0;
+
+    while (i < workerS.length )
+        {
+             if (para ===  workerS[i].email)
+                {
+                    return 1;
+                    
+                }
+                i++;
+        
+    }
+    return 0;
+    
+} 
+
+// console.log(count);
+
+
 form_addworker.onclick  = function(){
 
-    if (count_inputs(input_name.value) < 10){
-        alert("The name must be 10 char")   
+    if (check_email_repeat(input_email.value) === 1)
+        {
+        alert("email  already exist");
+        return;
+    }
+    if (count_inputs(input_name.value) < 7){
+        alert("The name must be 10 char") 
+        return;  
     }
      
     if (check_email(input_email.value) !== 1){
         alert("email not valid exmple = amine@gmail.com");
         
     }else 
-        console.log("gggg");
+        
     if (count_inputs(input_phone.value) !== 10){
         alert("please  the number must  be 10 numbers");
         
@@ -206,11 +236,9 @@ form_addworker.onclick  = function(){
         return;
 
     }
-        
-    
 
     let worker = {};
-
+    
     let index = 0;
     
 
@@ -223,9 +251,10 @@ form_addworker.onclick  = function(){
     worker.id = Date.now();
     
     workerS.push(worker);
+    alert("register ")
 
 
-    localStorage.setItem("works", JSON.stringify(workerS));
+    // localStorage.setItem("works", JSON.stringify(workerS));
     createlement(worker);
 
     
@@ -235,7 +264,7 @@ form_addworker.onclick  = function(){
 
 
 }
-
+console.log(workerS);
 
 function createlement(worker){ 
 
@@ -261,30 +290,40 @@ function createlement(worker){
 
     newimployye.className = "infoimployees"; 
     divedit.className = "bototEdit"; 
+    const rl = document.createElement("strong");
+    rl.style.display = "none";
+
+    rl.textContent = worker.role ;
+    newimployye.appendChild(rl);
+    
+    
 
     
     editboto.setAttribute("data-id",worker.id);
+    
 
    
     
 
-    img.onclick = function ()
+    img.onclick = function()
     {
         const imcard = document.getElementById("imgcard")
         
-        
+        imcard.src = worker.photo;
         cardInfo.style.display = "block";
         employeeName.textContent = worker.namecomp;
         employeeEmail.textContent = worker.email;
         employeePhone.textContent = worker.phone;
         employeeRole.textContent = worker.role;
+        employeeExperiences.textContent =  worker.exp;
+         
        
-       console.log(worker);
+    //    console.log(worker);
     }
     
 
 
-   const cardInfo  = document.getElementById("cardInfo");
+    const cardInfo  = document.getElementById("cardInfo");
     const closeCardInfo  = document.getElementById("closeCardInfo");
    
 
@@ -297,8 +336,7 @@ function createlement(worker){
     }
     closeCardInfo.onclick = function()
     {
-        cardInfo.style.display = "none"
-        
+        cardInfo.style.display = "none";
     }
     
 
@@ -310,7 +348,8 @@ function createlement(worker){
     
     
     const copy = newimployye.cloneNode(true);
-   
+    copy.className = "infoemp2";
+    
     
 
     placeAllInfo.appendChild(newimployye);
@@ -319,6 +358,7 @@ function createlement(worker){
     ALLcard.appendChild(copy); 
     const editH5  = copy.querySelector(".h5");
     const editBtnClone = copy.querySelector(".editboto");
+    // console.log(copy)
 
      //   const buttons = document.querySelectorAll(".editBtn");
 
@@ -346,6 +386,8 @@ function createlement(worker){
     span.textContent = worker.namecomp ; 
     
     const roleSpan = document.createElement("strong");
+    roleSpan.style.display = "none"; 
+    roleSpan.textContent = worker.role;
    
 
        const zone = cardunique.id; 
